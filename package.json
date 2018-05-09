@@ -1,0 +1,27 @@
+{
+  "name": "blade",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "start": "NODE_ENV=production node ./build/main.js",
+    "dev": "nodemon",
+    "build": "tsc",
+    "migrate:make": "knex migrate:make -x ts --",
+    "seed:make": "knex seed:make -x ts --",
+    "migrate": "yaguar migrate:latest",
+    "migrate:rollback": "yaguar migrate:rollback",
+    "seed": "yaguar seed:run"
+  },
+  "dependencies": {
+    "@iguazu/coati": "^0.1.2",
+    "@iguazu/puma": "^0.2.13",
+    "@iguazu/yaguar": "^0.1.9"
+  },
+  "devDependencies": {
+    "prettier": "^1.12.1",
+    "ts-node": "^6.0.2",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.12.0",
+    "typescript": "^2.8.3"
+  }
+}
